@@ -2,9 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import CubicSpline
 
+
 # Given data points
 x = np.array([0, 0.5, 1.0, 1.5])
 y = np.array([0, 0.25, 0.75, 2.25])
+
+
 
 # Perform cubic spline interpolation
 cs = CubicSpline(x, y)
@@ -13,7 +16,7 @@ cs = CubicSpline(x, y)
 x_fine = np.linspace(0, 1.5, 100)
 y_fine = cs(x_fine)
 
-# Plot the results
+#    Ploting the results here
 plt.scatter(x, y, color='red', label='Data Points')
 plt.plot(x_fine, y_fine, label='Cubic Spline', linestyle='--')
 plt.xlabel('x')
